@@ -15,7 +15,7 @@ openshift_cli_url: https://mirror.openshift.com/pub/openshift-v4/clients/ocp/{{ 
 openshift_install: "{{ bin_dir }}/openshift-install-{{ openshift_version }}"
 oc: "{{ bin_dir }}/oc-{{ openshift_version }}"
 
-region: "us-west-2"
+region: "ap-southeast-2"
 
 clustername: "foobar"
 
@@ -70,5 +70,5 @@ bootstrap_cleanup: true
 
 # Enable this to only expose the API internally, requires ansible host to
 # be on the same network as cluster
-api_internal_only: true
+api_internal_only: false
 ...
