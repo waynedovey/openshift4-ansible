@@ -28,9 +28,9 @@ spec:
           apiVersion: awsproviderconfig.openshift.io/v1beta1
           blockDevices:
           - ebs:
-              iops: 0
-              volumeSize: 120
-              volumeType: gp2
+              iops: "{{ master_disk_iops }}"
+              volumeSize: "{{ master_disk_size }}"
+              volumeType: "{{ master_disk_type }}"
           credentialsSecret:
             name: aws-cloud-credentials
           deviceIndex: 0

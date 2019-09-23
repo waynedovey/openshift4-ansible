@@ -19,6 +19,10 @@ controlPlane:
       - {{ region }}a
       - {{ region }}b
       - {{ region }}c
+      rootVolume:
+        iops: {{ master_disk_iops }}
+        size: {{ master_disk_size }}
+        type: {{ master_disk_type }}
   replicas: 3
 metadata:
   creationTimestamp: null
