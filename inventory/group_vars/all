@@ -84,7 +84,7 @@ ldap_secret_name: "ldap-secret1"
 # LDAP identity provider name
 ldap_idp_name: "ldapidp1"
 # Bind DN
-bindDN: "dmp-nonprod@ad.p.dmp.aws.hosting.transport.nsw.gov.au"
+bindDN: "a@X.nsw.gov.au"
 # LDAP URL
-ldap_url: "ldap://ad.p.dmp.aws.hosting.transport.nsw.gov.au:389/OU=Users,OU=ad,DC=ad,DC=p,DC=dmp,DC=aws,DC=hosting,DC=transport,DC=nsw,DC=gov,DC=au?sAMAccountName"
+ldap_url: "ldap://X.nsw.gov.au:389/OU=Users,OU=ad,DC=X,DC=nsw,DC=gov,DC=au"
 ...
