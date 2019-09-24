@@ -87,4 +87,18 @@ ldap_idp_name: "ldapidp1"
 bindDN: "a@X.test.example.au"
 # LDAP URL
 ldap_url: "ldap://X.test.example.au:389/OU=Users,OU=ad,DC=X,DC=test,DC=example,DC=au"
+
+#########################
+# Cluster Monitoring
+#########################
+# Enable Cluster Monitoring Storage and Retention
+enable_cluster_monitoring: false
+# Required Storage Class
+prometheus_storage_class: "gp2"
+# Required Prometheus Storage
+prometheus_storage_size: "20Gi"
+# Required Prometheus Retention Period (h (hours), d (days), w (weeks), or y (years))
+prometheus_retention_time: "7d"
+# Prometheus Replicas 
+prometheus_statefulset_replicas: "3" 
 ...
