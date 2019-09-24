@@ -1,0 +1,19 @@
+---
+
+- block:
+  - name: 1.0 | Creating LDAP secrets | tasks/post_installation.yaml
+    k8s:
+      state: present
+      definition: "{{ lookup('template', 'files/LDAPsecret.yaml.j2') }}"
+      validate:
+        fail_on_error: no
+        strict: yes
+
+  - name: 2.0 | Creating LDAP Custom Resource | tasks/post_installation.yaml
+    k8s:
+      state: present
+      definition: "{{ lookup('template', 'files/Oauth.yaml.j2') }}"
+      validate:
+        fail_on_error: no
+        strict: yes
+  when: enable_ldap_integration == true

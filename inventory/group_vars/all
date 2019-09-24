@@ -71,4 +71,20 @@ bootstrap_cleanup: true
 # Enable this to only expose the API internally, requires ansible host to
 # be on the same network as cluster
 api_internal_only: false
+
+#########################
+# LDAP
+#########################
+# Enable LDAP integration, disabled by default
+enable_ldap_integration: false
+# LDAP bind password, ideally should be in Ansible Vault or other secrets management tool
+ldap_bindPassword: "r3dh4t!"
+# Name for the LDAP secret containing LDAP password
+ldap_secret_name: "ldap-secret1"
+# LDAP identity provider name
+ldap_idp_name: "ldapidp1"
+# Bind DN
+bindDN: "dmp-nonprod@ad.p.dmp.aws.hosting.transport.nsw.gov.au"
+# LDAP URL
+ldap_url: "ldap://ad.p.dmp.aws.hosting.transport.nsw.gov.au:389/OU=Users,OU=ad,DC=ad,DC=p,DC=dmp,DC=aws,DC=hosting,DC=transport,DC=nsw,DC=gov,DC=au?sAMAccountName"
 ...

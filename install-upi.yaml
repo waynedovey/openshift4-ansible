@@ -274,7 +274,7 @@
     - name: fix dns settings
       command: "{{ oc }} replace -f /tmp/{{ clustername }}/dnses.yaml"
       when: finish.stat.exists == False
-        
+
 #    - name: workaround for missing kubeadmin-password file
 #      copy:
 #        dest: "/tmp/{{ clustername }}/auth/kubeadmin-password"
@@ -316,4 +316,6 @@
           - ""
           - "API: https://api.{{ clustername }}.{{ publiczonename }}:6443"
           - "Web console: https://console-openshift-console.apps.{{ clustername }}.{{ publiczonename }}/"
+
+    - import_tasks: tasks/post_installation.yaml
 ...
