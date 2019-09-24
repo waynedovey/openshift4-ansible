@@ -78,13 +78,13 @@ api_internal_only: false
 # Enable LDAP integration, disabled by default
 enable_ldap_integration: false
 # LDAP bind password, ideally should be in Ansible Vault or other secrets management tool
-ldap_bindPassword: "r3dh4t!"
+ldap_bindPassword: "SUPERSECRET"
 # Name for the LDAP secret containing LDAP password
 ldap_secret_name: "ldap-secret1"
 # LDAP identity provider name
 ldap_idp_name: "ldapidp1"
 # Bind DN
-bindDN: "a@X.nsw.gov.au"
+bindDN: "a@X.test.example.au"
 # LDAP URL
-ldap_url: "ldap://X.nsw.gov.au:389/OU=Users,OU=ad,DC=X,DC=nsw,DC=gov,DC=au"
+ldap_url: "ldap://X.test.example.au:389/OU=Users,OU=ad,DC=X,DC=test,DC=example,DC=au"
 ...
