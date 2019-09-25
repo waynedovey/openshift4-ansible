@@ -77,7 +77,7 @@ api_internal_only: false
 #########################
 # Enable LDAP integration, disabled by default
 enable_ldap_integration: false
-# LDAP bind password, ideally should be in Ansible Vault or other secrets management tool
+# LDAP bind password in plain text, ideally should be in Ansible Vault or other secrets management tool
 ldap_bindPassword: "SUPERSECRET"
 # Name for the LDAP secret containing LDAP password
 ldap_secret_name: "ldap-secret1"
@@ -99,6 +99,6 @@ prometheus_storage_class: "gp2"
 prometheus_storage_size: "20Gi"
 # Required Prometheus Retention Period (h (hours), d (days), w (weeks), or y (years))
 prometheus_retention_time: "7d"
-# Prometheus Replicas 
-prometheus_statefulset_replicas: "3" 
+# Prometheus Replicas
+prometheus_statefulset_replicas: "3"
 ...
